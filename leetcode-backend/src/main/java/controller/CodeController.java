@@ -2,7 +2,6 @@ package controller;
 
 
 import entity.CodeDAO;
-import entity.CodeDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,23 +30,23 @@ public class CodeController {
     }
 
     @PostMapping("/{userId}")
-    public ResponseEntity<CodeDTO> createCodeExample(@PathVariable long userId, String code, String language) {
+    public ResponseEntity<CodeDAO> createCodeExample(@PathVariable long userId, String code, String language) {
         try {
             return null;
         } catch (NoSuchElementException e) {
-            return new ResponseEntity<CodeDTO>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<CodeDAO>(HttpStatus.NOT_FOUND);
         } catch (Exception e) {
-            return new ResponseEntity<CodeDTO>(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<CodeDAO>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
     @PostMapping("/{userId}/{codeId}")
-    public ResponseEntity<CodeDTO> changeCodeExample(@PathVariable long userId, @PathVariable long codeId, String code, String language) {
+    public ResponseEntity<CodeDAO> changeCodeExample(@PathVariable long userId, @PathVariable long codeId, String code, String language) {
         try {
             return null;
         } catch (NoSuchElementException e) {
-            return new ResponseEntity<CodeDTO>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<CodeDAO>(HttpStatus.NOT_FOUND);
         } catch (Exception e) {
-            return new ResponseEntity<CodeDTO>(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<CodeDAO>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
