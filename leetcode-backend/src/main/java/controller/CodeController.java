@@ -21,6 +21,18 @@ public class CodeController {
             return null;
         } catch (NoSuchElementException e) {
             return new ResponseEntity<CodeDTO>(HttpStatus.NOT_FOUND);
+        } catch (Exception e) {
+            return new ResponseEntity<CodeDTO>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+    @PostMapping("/{userId}/{codeId}")
+    public ResponseEntity<CodeDTO> changeCodeExample(@PathVariable long userId, @PathVariable long codeId, String code, String language) {
+        try {
+            return null;
+        } catch (NoSuchElementException e) {
+            return new ResponseEntity<CodeDTO>(HttpStatus.NOT_FOUND);
+        } catch (Exception e) {
+            return new ResponseEntity<CodeDTO>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
