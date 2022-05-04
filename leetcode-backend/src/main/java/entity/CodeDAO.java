@@ -3,11 +3,11 @@ package entity;
 
 import lombok.NoArgsConstructor;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
+@Document
 @NoArgsConstructor
 @EnableAutoConfiguration
 public class CodeDAO {
