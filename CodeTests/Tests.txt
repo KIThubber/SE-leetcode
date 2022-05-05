@@ -1,0 +1,12 @@
+Programmieren Sie einen Algorithmus, der unter Entgegennahme zweier Integer bestimmen kann, ob der erste Integer die Quadratzahl des zweiten Integers ist.
+Bsp. (4,2) -> True, da 4 Quadratzahl von 2
+
+
+Programmieren Sie einen Algorithmus, der unter Entgegennahme zweier Integer bestimmen kann, ob der erste Integer ein Vielfaches des zweiten Integers ist.
+Bsp. (12,4)-> True, da 12 Vielfaches von 4
+
+Programmieren Sie einen Algorithmus, welcher einen gegeben Doublewert von Grad Celsius in Grad Kelvin umrechnet. 
+
+Schreiben sie ein Programm, das unter Angabe von Höhe, Länge und Breite das Volumen ausgibt.
+
+Schreiben Sie ein Programm, das die Summe aus den einzelnen Werten eines Integer Arrays bildet und ausgibt.
