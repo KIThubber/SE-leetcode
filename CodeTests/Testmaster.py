@@ -1,24 +1,16 @@
-from unittest import TestResult
 import pytest
-
-global testresult
-
-def pytest_sessionstart(session):
-    session.results = dict()
+import sys
+import io
 
 
-@pytest.hookimpl(tryfirst=True, hookwrapper=True)
-def pytest_runtest_makereport(item, call):
-    outcome = yield
-    result = outcome.get_result()
-
-    if result.when == 'call':
-        item.session.results[item] = result
-
-def pytest_sessionfinish(session, exitstatus):
-    print()
-    testresult = exitstatus
-    print('run status code:', testresult)
     
-    
-print(testresult)
+if __name__ == '__main__':
+    stdout_bak = sys.stdout  # backup stdout
+    sys.stdout = io.StringIO()
+    pytest.main()
+    output = sys.stdout.getvalue()
+    sys.stdout.close()
+    sys.stdout = stdout_bak  # restore stdout
+    print(output)
+
+
