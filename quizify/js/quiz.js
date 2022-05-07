@@ -149,7 +149,7 @@ template: `
                 Select Programming Language
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Python3</a></li>
+                <li><a class="dropdown-item" href="#">Python</a></li>
                 <li><a class="dropdown-item" href="#">Java</a></li>
               </ul>
             </div>
