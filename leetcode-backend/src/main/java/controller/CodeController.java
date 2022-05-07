@@ -1,13 +1,14 @@
 package controller;
 
 
-import entity.CodeDAO;
+import model.CodeDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import repository.CodeRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -21,7 +22,7 @@ public class CodeController {
     @GetMapping
     public ResponseEntity<List<CodeDAO>> getCodeExamples() {
         try {
-            return new ResponseEntity<List<CodeDAO>>(codeRepository.findAll(), HttpStatus.OK);
+            return new ResponseEntity<List<CodeDAO>>(new ArrayList<>(), HttpStatus.OK);
         } catch (NoSuchElementException e) {
             return new ResponseEntity<List<CodeDAO>>(HttpStatus.NOT_FOUND);
         } catch (Exception e) {
@@ -39,7 +40,7 @@ public class CodeController {
             return new ResponseEntity<CodeDAO>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-    @PostMapping("/{userId}/{codeId}")
+    @PutMapping("/{userId}/{codeId}")
     public ResponseEntity<CodeDAO> changeCodeExample(@PathVariable long userId, @PathVariable long codeId, String code, String language) {
         try {
             return null;

@@ -1,14 +1,18 @@
-package entity;
+package model;
 
 
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 
-@Document
+@Document(value="code")
 @NoArgsConstructor
+@Getter
+@Setter
 @EnableAutoConfiguration
 public class CodeDAO {
     @Id
