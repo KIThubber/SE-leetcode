@@ -131,12 +131,12 @@ template: `
 	</div>
 `})
 
-/*Vue.component('run-button', {
+Vue.component('run-button', {
 template: `
         <div class="col-md-6">
         <button type="button" class="btn btn-outline-success">Run Code</button>
 	</div>
-`})*/
+`})
 
 Vue.component('language-selection', {
 template: `
