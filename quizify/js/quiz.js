@@ -87,10 +87,6 @@ template: `
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 <li><a class="dropdown-item" href="#">Python3</a></li>
                 <li><a class="dropdown-item" href="#">Java</a></li>
-                <li><a class="dropdown-item" href="#">JavaScript</a></li>
-                <li><a class="dropdown-item" href="#">Go</a></li>
-                <li><a class="dropdown-item" href="#">C++</a></li>
-                <li><a class="dropdown-item" href="#">Swift</a></li>
               </ul>
             </div>
         </div>
