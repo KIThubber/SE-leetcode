@@ -20,11 +20,13 @@ public class CodeDAO {
     private String code;
     private String language;
     private long userId;
+    private String result;
 
 
-    public CodeDAO(long userId, String code, String language) {
+    public CodeDAO(long userId, String code, String language, String result) {
         this.userId = userId;
         this.code = code;
         this.language = language;
+        this.result = result;
     }
 }

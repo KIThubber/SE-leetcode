@@ -15,10 +15,10 @@ public class MongoConfig {
         return strings -> {
             codeRepository.save(new CodeDAO(1,"public static void main() {" +
                     "int test =1;" +
-                    "}", "j"));
+                    "}", "j", ""));
             codeRepository.save(new CodeDAO(2,"public static void main() {" +
                     "int test =3;" +
-                    "}", "j"));
+                    "}", "j", ""));
         };
     }
 }
