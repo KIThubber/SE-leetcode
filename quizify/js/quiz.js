@@ -205,8 +205,8 @@ Vue.component('question-description2', {
     <div>
         <p><strong>Problem Description:</strong></p>
     
-        <p>Programmieren Sie einen Algorithmus, der unter Entgegennahme zweier Integer bestimmen kann, ob der erste Integer die Quadratzahl des zweiten Integers ist.
-        Bsp. (4,2) -> True, da 4 Quadratzahl von 2</p>
+        <p>Programmieren Sie einen Algorithmus, der unter Entgegennahme zweier Integer bestimmen kann, ob der erste Integer die Quadratzahl des zweiten Integers ist.</p>
+        <p>Bsp. (4,2) -> True, da 4 Quadratzahl von 2</p>
     </div>
     `})
 
@@ -240,7 +240,7 @@ Vue.component('question-description4', {
     <div>
         <p><strong>Problem Description:</strong></p>
     
-        <p>Programmieren Sie einen Algorithmus, der unter Entgegennahme zweier Integer bestimmen kann, ob der erste Integer ein Vielfaches des zweiten Integers ist.
-        Bsp. (12,4)-> True, da 12 Vielfaches von 4</p>
+        <p>Programmieren Sie einen Algorithmus, der unter Entgegennahme zweier Integer bestimmen kann, ob der erste Integer ein Vielfaches des zweiten Integers ist.</p>
+        <p>Bsp. (12,4)-> True, da 12 Vielfaches von 4</p>
     </div>
     `})
