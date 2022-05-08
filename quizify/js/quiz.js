@@ -114,11 +114,19 @@ template: `
 `
 })
 
+
+
 Vue.component('run-or-submit', {
+    methods: {
+        test: function test () {
+            console.log("test")
+        }
+        
+    },
 template: `
         <div class="col-md-4">
 	<div class="row">
-	<run-button></run-button>
+	<run-button  v-on:click.native="test" ></run-button>
 	<submit-button></submit-button>
 	</div>
 	</div>
@@ -127,16 +135,20 @@ template: `
 Vue.component('submit-button', {
 template: `
 	<div class="col-md-6">
-	<button type="button" class="btn btn-success">Submit Code</button>
+	<button id="submit-button" type="button" class="btn btn-success">Submit Code</button>
 	</div>
 `})
 
 Vue.component('run-button', {
 template: `
         <div class="col-md-6">
-        <button type="button" class="btn btn-outline-success">Run Code</button>
+        <button id = "run-button" type="button" class="btn btn-outline-success">Run Code</button>
 	</div>
 `})
+
+
+let runButton = document.getElementById("run-button")
+console.log(runButton);
 
 Vue.component('language-selection', {
 template: `
