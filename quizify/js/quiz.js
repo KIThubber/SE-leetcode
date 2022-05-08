@@ -17,7 +17,61 @@ template: `
 `
 })
 
-Vue.component('question-view', {
+var questionsZahl = Math.floor((Math.random() * (5+1 - 1)) + 1);
+
+if (questionsZahl == 1) {
+  Vue.component('question-view', {
+    template: `
+        <div class="col-md-5">
+            <div class="bg-light border rounded-3">
+                <question></question>
+            </div>
+        </div>
+    `
+    })
+} else if (questionsZahl == 2) {
+  Vue.component('question-view', {
+    template: `
+        <div class="col-md-5">
+            <div class="bg-light border rounded-3">
+                <question1></question1>
+            </div>
+        </div>
+    `
+    })
+} else if (questionsZahl == 3) {
+  Vue.component('question-view', {
+    template: `
+        <div class="col-md-5">
+            <div class="bg-light border rounded-3">
+                <question2></question2>
+            </div>
+        </div>
+    `
+    })
+} else if (questionsZahl == 4) {
+  Vue.component('question-view', {
+    template: `
+        <div class="col-md-5">
+            <div class="bg-light border rounded-3">
+                <question3></question3>
+            </div>
+        </div>
+    `
+    })
+} else if (questionsZahl == 5) {
+  Vue.component('question-view', {
+    template: `
+        <div class="col-md-5">
+            <div class="bg-light border rounded-3">
+                <question4></question4>
+            </div>
+        </div>
+    `
+    })
+}
+
+/*Vue.component('question-view', {
 template: `
     <div class="col-md-5">
         <div class="bg-light border rounded-3">
@@ -26,6 +80,16 @@ template: `
     </div>
 `
 })
+
+Vue.component('question-view1', {
+template: `
+    <div class="col-md-5">
+        <div class="bg-light border rounded-3">
+            <question1></question1>
+        </div>
+    </div>
+`
+})*/
 
 Vue.component('programming-view', {
 template: `
@@ -85,12 +149,8 @@ template: `
                 Select Programming Language
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Python3</a></li>
+                <li><a class="dropdown-item" href="#">Python</a></li>
                 <li><a class="dropdown-item" href="#">Java</a></li>
-                <li><a class="dropdown-item" href="#">JavaScript</a></li>
-                <li><a class="dropdown-item" href="#">Go</a></li>
-                <li><a class="dropdown-item" href="#">C++</a></li>
-                <li><a class="dropdown-item" href="#">Swift</a></li>
               </ul>
             </div>
         </div>
@@ -99,74 +159,88 @@ template: `
 `})
 
 Vue.component('question', {
-template: `
-	<div>
-	<question-description></question-description>
-	<question-examples></question-examples>
-	<question-constraints></question-constraints>
-	<question-follow-ups></question-follow-ups>
-	</div>
-`
-})
-
+    template: `
+        <div>
+        <question-description></question-description>
+        </div>
+    `
+    })
+    
 Vue.component('question-description', {
-template: `
-<div>
-    <p><strong>Problem Description:</strong></p>
-    <p>Given an integer <code>x</code>, return <code>true</code> if <code>x</code> is palindrome integer.</p>
-
-    <p>An integer is a <strong>palindrome</strong> when it reads the same backward as forward.</p>
-
-    <ul>
-        <li>For example, <code>121</code> is a palindrome while <code>123</code> is not.</li>
-    </ul>
-</div>
-`})
-
-Vue.component('question-examples', {
-template: `
-<div>
-    <p>&nbsp;</p>
-    <p><strong>Example 1:</strong></p>
-
-    <pre><strong>Input:</strong> x = 121
-    <strong>Output:</strong> true
-    <strong>Explanation:</strong> 121 reads as 121 from left to right and from right to left.
-    </pre>
-
-    <p><strong>Example 2:</strong></p>
-
-    <pre><strong>Input:</strong> x = -121
-    <strong>Output:</strong> false
-    <strong>Explanation:</strong> From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
-    </pre>
-
-    <p><strong>Example 3:</strong></p>
-
-    <pre><strong>Input:</strong> x = 10
-    <strong>Output:</strong> false
-    <strong>Explanation:</strong> Reads 01 from right to left. Therefore it is not a palindrome.
-    </pre>
-</div>
-`})
-
-Vue.component('question-constraints', {
-template: `
-<div>
-    <p>&nbsp;</p>
-    <p><strong>Constraints:</strong></p>
-
-    <ul>
-        <li><code>-2<sup>31</sup>&nbsp;&lt;= x &lt;= 2<sup>31</sup>&nbsp;- 1</code></li>
-    </ul>
-</div>
-`})
-
-Vue.component('question-follow-ups', {
-template: `
+    template: `
     <div>
-    <p>&nbsp;</p>
-    <strong>Follow up:</strong> Could you solve it without converting the integer to a string?
+        <p><strong>Problem Description:</strong></p>
+    
+        <p>Schreiben sie ein Programm, das unter Angabe von <code>Höhe</code>, <code>Länge</code> und <code>Breite</code> das <code>Volumen</code> ausgibt.</p>
     </div>
-`
-})
+    `})
+
+Vue.component('question1', {
+    template: `
+        <div>
+        <question-description1></question-description1>
+        </div>
+    `
+    })
+    
+Vue.component('question-description1', {
+    template: `
+    <div>
+        <p><strong>Problem Description:</strong></p>
+    
+        <p>Programmieren Sie einen Algorithmus, welcher einen gegeben <code>Doublewert</code> von <code>Grad Celsius</code> in <code>Grad Kelvin</code> umrechnet.</p>
+    </div>
+    `})
+
+Vue.component('question2', {
+    template: `
+        <div>
+        <question-description2></question-description2>
+        </div>
+    `
+    })
+    
+Vue.component('question-description2', {
+    template: `
+    <div>
+        <p><strong>Problem Description:</strong></p>
+    
+        <p>Programmieren Sie einen Algorithmus, der unter Entgegennahme zweier Integer bestimmen kann, ob der erste Integer die Quadratzahl des zweiten Integers ist.</p>
+        <p>Bsp. (4,2) -> True, da 4 Quadratzahl von 2</p>
+    </div>
+    `})
+
+Vue.component('question3', {
+    template: `
+        <div>
+        <question-description3></question-description3>
+        </div>
+    `
+    })
+    
+Vue.component('question-description3', {
+    template: `
+    <div>
+        <p><strong>Problem Description:</strong></p>
+    
+        <p>Schreiben Sie ein Programm, das die Summe aus den einzelnen Werten eines Integer Arrays bildet und ausgibt.</p>
+    </div>
+    `})
+
+Vue.component('question4', {
+    template: `
+        <div>
+        <question-description4></question-description4>
+        </div>
+    `
+    })
+    
+Vue.component('question-description4', {
+    template: `
+    <div>
+        <p><strong>Problem Description:</strong></p>
+    
+        <p>Programmieren Sie einen Algorithmus, der unter Entgegennahme zweier Integer bestimmen kann, ob der erste Integer ein Vielfaches des zweiten Integers ist.</p>
+        <p>Bsp. (12,4)-> True, da 12 Vielfaches von 4</p>
+    </div>
+    `})
