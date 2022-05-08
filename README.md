@@ -13,6 +13,13 @@ die Commands sind folgende:
 Die Api wäre erreichbar mit der floating IP, der Instanz als Hostname und angehängt wird dann 
 "/code/v1"
 
+# Architekturherrausforderungen
+Scalability und Availability sind hier in erster Linie von Bedeutung, um den Mehrnutzerbetrieb zu ermöglichen.
+Elastizität ist relevant, wenn bei Programmierwettbewerben viele Nutzer auf einmal zugreifen.
+Performance spielt bei unseren Nutzern nicht eine so wichtige Rolle
+
+-> Wir haben uns für eine MicroService Architektur entschieden
+
 # Probleme
 Vermutung: Aufgrund den Berechtigungen der bw-cloud, kann das Spring Backend nicht auf die Datenbank zugreifen und dadurch war es nicht möglich die API zu testen.
 
